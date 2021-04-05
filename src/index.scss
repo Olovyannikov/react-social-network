@@ -1,0 +1,68 @@
+@import "./assets/fonts/fonts.scss";
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #151728;
+  color: #9c9cab;
+}
+
+#root {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  max-width: 1600px;
+  background: linear-gradient(to bottom, #151728 0%, #151728 76%, rgba(21, 23, 40, 0) 100%);
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+a {
+  svg {
+    margin-right: 20px;
+  }
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 0.4em 0;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: hotpink;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+a:hover::after,
+a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+a::after {
+  opacity: 1;
+  transform: translate3d(-101%, 0, 0);
+}
+
+a:hover::after, a:focus::after {
+  transform: translate3d(0, 0, 0);
+}
