@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFax, faGem, faMailBulk, faNewspaper, faPoo, faVoicemail} from "@fortawesome/free-solid-svg-icons";
+import {faFax, faGem, faNewspaper, faPoo} from "@fortawesome/free-solid-svg-icons";
 import "./App.scss"
 import {faUser} from "@fortawesome/free-regular-svg-icons";
 
