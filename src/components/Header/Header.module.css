@@ -1,0 +1,8 @@
+.header {
+    width: 100%;
+}
+
+.headerLogo {
+    display: flex;
+    gap: 10px;
+}
