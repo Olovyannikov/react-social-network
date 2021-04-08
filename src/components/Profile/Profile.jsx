@@ -1,7 +1,8 @@
 import profileImg from "../../assets/img/profile.jpg";
 import s from './Profile.module.scss';
+import MyPosts from "./MyPosts/MyPosts";
 
-const Profile = () => {
+const Profile = ({posts}) => {
     return (
         <main className={'content'}>
             <div className={s.profile}>
@@ -10,13 +11,7 @@ const Profile = () => {
                     <p>Quan Ha</p>
                 </div>
             </div>
-            <div>
-                <p>POSTS</p>
-                <button>new post</button>
-                <p>post1</p>
-                <p>post2</p>
-            </div>
-
+            <MyPosts posts={posts}/>
         </main>
     )
 }

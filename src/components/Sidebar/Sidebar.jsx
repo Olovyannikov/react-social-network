@@ -9,7 +9,7 @@ const Sidebar = () => {
             <nav>
                 <ul className={s.navList}>
                     <li>
-                        <a href="/profile">
+                        <a className={s.active} href="/profile">
                             <FontAwesomeIcon icon={faUser}/>
                             Profile
                         </a>
