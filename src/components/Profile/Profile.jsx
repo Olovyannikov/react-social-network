@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = ({posts}) => {
     return (
-        <main className={'content'}>
+        <>
             <div className={s.profile}>
                 <div className={s.profileAvatar}>
                     <img src={profileImg} alt=""/>
@@ -12,7 +12,7 @@ const Profile = ({posts}) => {
                 </div>
             </div>
             <MyPosts posts={posts}/>
-        </main>
+        </>
     )
 }
 

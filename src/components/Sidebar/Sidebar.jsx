@@ -2,6 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-regular-svg-icons";
 import {faFax, faGem, faNewspaper} from "@fortawesome/free-solid-svg-icons";
 import s from './Sidebar.module.scss'
+import {NavLink} from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -9,22 +10,29 @@ const Sidebar = () => {
             <nav>
                 <ul className={s.navList}>
                     <li>
-                        <a className={s.active} href="/profile">
+                        <NavLink activeClassName={s.active} to="/profile">
                             <FontAwesomeIcon icon={faUser}/>
                             Profile
-                        </a>
+                        </NavLink>
                     </li>
-                    <li><a href="/messages">
-                        <FontAwesomeIcon icon={faFax}/>
-                        Messages</a></li>
-                    <li><a href="/news">
-                        <FontAwesomeIcon icon={faNewspaper}/>
-                        News</a></li>
+                    <li>
+                        <NavLink activeClassName={s.active} to="/messages">
+                            <FontAwesomeIcon icon={faFax}/>
+                            Messages
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName={s.active} to="/news">
+                            <FontAwesomeIcon icon={faNewspaper}/>
+                            News
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
-            <a href="/settings">
+            <NavLink activeClassName={s.active} to="/settings">
                 <FontAwesomeIcon icon={faGem}/>
-                Settings</a>
+                    Settings
+            </NavLink>
         </aside>
     )
 }
