@@ -1,0 +1,35 @@
+.messageItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  border: 1px solid #9c9cabaa;
+  border-radius: 3px;
+  padding: 10px;
+  transition: .2s;
+
+  &:hover, &:focus {
+    background: #9c9cabaa;
+    border: 1px solid transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &.active {
+    background: #9c9cabaa;
+    border: 1px solid transparent;
+  }
+}
+
+.messagePreview {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-top: 10px;
+  }
+  p {
+    margin: 10px 0;
+  }
+}

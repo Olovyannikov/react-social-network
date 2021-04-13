@@ -1,27 +1,16 @@
 import s from './Messages.module.scss';
-import {NavLink} from "react-router-dom";
+import MessageItem from "./MessageItem/MessageItem";
 
 const Messages = ({messages}) => {
-
-    const dialogsList = messages.map(message => {
-        return (
-            <li key={message.id}>
-                <NavLink activeClassName={s.active} to={`/messages/${message.id}`}>
-                    <img src={message.src} alt={message.alt}/>
-                    <span>{message.name}</span>
-                </NavLink>
-            </li>
-        )
-    })
 
     return (
         <>
             <div className={s.messages}>
                 <ul className={s.messagesList}>
-                    {dialogsList}
+                    <MessageItem messages={messages}/>
                 </ul>
                 <div className={s.messagesDialog}>
-                    {messages[0].message}
+                    {messages.map(message => <p key={message.id}>{message.message}</p>)}
                 </div>
             </div>
         </>

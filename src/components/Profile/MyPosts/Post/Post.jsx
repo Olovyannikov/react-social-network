@@ -4,7 +4,7 @@ import s from './Post.module.scss';
 
 const Post = ({posts}) => {
 
-    let item = posts.map(post => {
+    return posts.map(post => {
         return (
             <div key={post.id} className={s.item}>
                 <div className={s.itemAvatar}>
@@ -17,15 +17,12 @@ const Post = ({posts}) => {
                     </div>
                 </div>
                 <div className="itemPost">
-                <p>{post.message}</p>
+                    <p>{post.message}</p>
 
                 </div>
             </div>
         )
     })
-
-
-    return item
 }
 
 export default Post;

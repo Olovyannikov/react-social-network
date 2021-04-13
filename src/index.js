@@ -4,6 +4,13 @@ import './index.scss';
 import App from './App';
 
 const state = {
+    profile: [
+        {
+            name: 'Quan',
+            lastName: 'Ha',
+            img: 'static/media/profile.jpg'
+        }
+    ],
     posts: [
         {
             src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxLkbtTa0kfmKizxJgqECQLdlt_xq1R2jEQQ&usqp=CAU',
@@ -46,6 +53,7 @@ ReactDOM.render(
         <App
             posts={state.posts}
             messages={state.messages}
+            profile={state.profile}
         />
     </React.StrictMode>,
     document.getElementById('root')

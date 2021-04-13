@@ -1,16 +1,10 @@
-import profileImg from "../../assets/img/profile.jpg";
-import s from './Profile.module.scss';
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = ({posts}) => {
+const Profile = ({posts, profile}) => {
     return (
         <>
-            <div className={s.profile}>
-                <div className={s.profileAvatar}>
-                    <img src={profileImg} alt=""/>
-                    <p>Quan Ha</p>
-                </div>
-            </div>
+            <ProfileInfo profile={profile}/>
             <MyPosts posts={posts}/>
         </>
     )

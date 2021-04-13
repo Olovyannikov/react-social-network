@@ -4,7 +4,7 @@ import Profile from "./components/Profile/Profile";
 import Messages from "./components/Messages/Messages";
 import {BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 
-const App = ({posts, messages}) => {
+const App = ({posts, messages, profile}) => {
     return (
         <Router>
             <Header/>
@@ -14,7 +14,10 @@ const App = ({posts, messages}) => {
                     <Redirect to={'/profile'}/>
                 </Route>
                 <Route path='/profile'>
-                    <Profile posts={posts}/>
+                    <Profile
+                        posts={posts}
+                        profile={profile}
+                    />
                 </Route>
                 <Route path='/messages'>
                     <Messages messages={messages}/>
