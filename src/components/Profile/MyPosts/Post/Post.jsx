@@ -18,7 +18,6 @@ const Post = ({posts}) => {
                 </div>
                 <div className="itemPost">
                     <p>{post.message}</p>
-
                 </div>
             </div>
         )

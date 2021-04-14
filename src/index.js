@@ -45,7 +45,6 @@ const state = {
             active: false
         }
     ]
-
 }
 
 ReactDOM.render(

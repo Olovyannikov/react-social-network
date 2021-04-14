@@ -1,5 +1,6 @@
 import s from './Messages.module.scss';
 import MessageItem from "./MessageItem/MessageItem";
+import Message from "./Message/Message";
 
 const Messages = ({messages}) => {
 
@@ -9,9 +10,7 @@ const Messages = ({messages}) => {
                 <ul className={s.messagesList}>
                     <MessageItem messages={messages}/>
                 </ul>
-                <div className={s.messagesDialog}>
-                    {messages.map(message => <p key={message.id}>{message.message}</p>)}
-                </div>
+                <Message messages={messages}/>
             </div>
         </>
     )
