@@ -13,15 +13,9 @@ const App = ({posts, messages, profile}) => {
                 <Route exact path='/'>
                     <Redirect to={'/profile'}/>
                 </Route>
-                <Route path='/profile'>
-                    <Profile
-                        posts={posts}
-                        profile={profile}
-                    />
-                </Route>
-                <Route path='/messages'>
-                    <Messages messages={messages}/>
-                </Route>
+                <Route path='/profile' render={() => <Profile posts={posts} profile={profile}/>}/>
+                <Route path='/messages' render={() => <Messages messages={messages}/>}/>
+
             </main>
         </Router>
     );

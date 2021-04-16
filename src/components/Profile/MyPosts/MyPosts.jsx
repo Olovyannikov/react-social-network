@@ -8,7 +8,6 @@ const MyPosts = ({posts}) => {
             <h2>My posts</h2>
             <textarea placeholder='Введите текст нового поста...' className={s.textarea}/>
             <button className={s.newPost}>new post</button>
-
             <Post posts={posts}/>
         </div>
     )

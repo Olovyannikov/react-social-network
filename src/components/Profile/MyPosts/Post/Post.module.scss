@@ -3,8 +3,7 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  border-radius: 20px;
+  border-radius: 10px;
   background: rgba(156, 156, 171, 0.2);
   color: #fff;
 
@@ -52,4 +51,8 @@
   svg {
     cursor: pointer;
   }
+}
+
+.likesCount {
+
 }
