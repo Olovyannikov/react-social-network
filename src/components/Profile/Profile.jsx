@@ -1,10 +1,11 @@
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = ({posts, profile}) => {
+const Profile = ({data}) => {
+    const {user, posts} = data;
     return (
         <>
-            <ProfileInfo profile={profile}/>
+            <ProfileInfo profile={user}/>
             <MyPosts posts={posts}/>
         </>
     )

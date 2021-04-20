@@ -4,10 +4,10 @@ const ProfileInfo = ({profile}) => {
     return (
         <div className={s.profile}>
             <div className={s.profileAvatar}>
-                <img src={profile[0].img} alt=""/>
+                <img src={profile.img} alt=""/>
                 <p>
-                    <span>{profile[0].name} </span>
-                    <span>{profile[0].lastName}</span>
+                    <span>{profile.name} </span>
+                    <span>{profile.lastName}</span>
                 </p>
             </div>
         </div>
