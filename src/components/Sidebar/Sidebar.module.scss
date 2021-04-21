@@ -1,5 +1,5 @@
 .navList {
-  width: 150px;
+  width: 190px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -10,4 +10,5 @@
 
 .active {
   color: #fff;
+  pointer-events: none;
 }

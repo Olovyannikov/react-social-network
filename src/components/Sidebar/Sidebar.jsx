@@ -1,38 +1,24 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser} from "@fortawesome/free-regular-svg-icons";
-import {faFax, faGem, faNewspaper} from "@fortawesome/free-solid-svg-icons";
 import s from './Sidebar.module.scss'
 import {NavLink} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faComment, faGem, faUser, faNewspaper} from "@fortawesome/free-solid-svg-icons";
+import FriendsList from "./FriendList/FriendsList";
+import MenuItems from "./MenuItems/MenuItems";
 
-const Sidebar = () => {
+library.add(
+    faComment, faUser, faNewspaper
+);
+
+const Sidebar = ({sidebar}) => {
     return (
         <aside>
-            <nav>
-                <ul className={s.navList}>
-                    <li>
-                        <NavLink activeClassName={s.active} to="/profile">
-                            <FontAwesomeIcon icon={faUser}/>
-                            Profile
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName={s.active} to="/messages">
-                            <FontAwesomeIcon icon={faFax}/>
-                            Messages
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName={s.active} to="/news">
-                            <FontAwesomeIcon icon={faNewspaper}/>
-                            News
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
+            <MenuItems sidebar={sidebar}/>
             <NavLink activeClassName={s.active} to="/settings">
                 <FontAwesomeIcon icon={faGem}/>
-                    Settings
+                Settings
             </NavLink>
+            <FriendsList friends={sidebar.friends}/>
         </aside>
     )
 }

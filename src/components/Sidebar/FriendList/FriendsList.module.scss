@@ -1,0 +1,29 @@
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.friends {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.friendBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.friendNameBlock {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
